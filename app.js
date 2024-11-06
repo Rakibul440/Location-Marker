@@ -21,12 +21,11 @@ io.on('connection',(socket)=>{
             id:socket.id,
             ...data
         })
-        console.log("user Connected : ",socket.id);  
+        console.log("user Connected : ",socket.id ,"Location : ",data);  
     })
 
     socket.on('disconnet',function(){
         io.emit('user-disconnect',socket.id)
-        console.log("dicon :",socket.id);
         
     })
     
